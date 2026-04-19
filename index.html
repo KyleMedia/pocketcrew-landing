@@ -1216,16 +1216,55 @@
 
 
 
-  /* ─── EXPANDED ABOUT SECTION ─── */
+
+  /* ─── ABOUT SECTION HEADER (dedicated) ─── */
+  .about-header {
+    margin-bottom: 64px;
+    max-width: 720px;
+  }
+
+  .about-header .section-number {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .about-section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(56px, 7vw, 88px);
+    text-transform: uppercase;
+    line-height: 0.9;
+    color: var(--off-black);
+    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+  }
+
+  .about-rule {
+    width: 56px;
+    height: 3px;
+    background: var(--orange);
+  }
+
+  /* Tighten the about-heading since the section already has a big title */
   .about-heading {
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 900;
-    font-size: clamp(44px, 5vw, 68px);
+    font-size: clamp(36px, 4.5vw, 56px);
     text-transform: uppercase;
-    line-height: 0.92;
+    line-height: 0.95;
     color: var(--off-black);
     margin-bottom: 28px;
+    letter-spacing: -0.005em;
   }
+
+  @media (max-width: 768px) {
+    .about-header { margin-bottom: 40px; }
+    .about-section-title { font-size: 52px; }
+    .about-heading { font-size: 36px; }
+  }
+
+  /* ─── EXPANDED ABOUT SECTION ─── */
+  /* old about-heading replaced above */
 
   .credits-block {
     margin: 32px 0;
@@ -1462,9 +1501,9 @@
         <img src="tape-orange.png" alt="The Pocket Crew" class="nav-tape-img">
       </a>
       <div class="nav-meta">
-        <a href="#field-notes" class="nav-link">Blog</a>
         <a href="#about" class="nav-link">About</a>
         <a href="https://thepocketcrew.gumroad.com" class="nav-link" target="_blank">Gumroad</a>
+        <a href="#field-notes" class="nav-link">Blog</a>
         <a href="#email-gate" class="nav-cta">Free Cheat Sheet</a>
       </div>
     </div>
@@ -1680,9 +1719,10 @@
 <section class="about-section" id="about">
   <div class="container">
 
-    <div class="section-header">
+    <div class="about-header">
       <span class="section-number">03 — Who builds this</span>
-      <h2 class="section-title">About</h2>
+      <h2 class="about-section-title">About</h2>
+      <div class="about-rule"></div>
     </div>
 
     <div class="about-inner">
